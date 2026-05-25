@@ -1,0 +1,283 @@
+/* Fix: Parent container must be a flex column with full height */
+.plugins-view-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Fills the screen height */
+  width: 100%;
+  background-color: #ffffff;
+  overflow: hidden; /* Prevents double scrollbars */
+}
+
+/* Fix: Scroll area takes remaining space, footer stays at bottom */
+.plugins-scroll-area {
+  flex: 1; 
+  padding: 40px 20px;
+  overflow-y: auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}   
+
+.plugins-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.main-title {
+  color: #193450;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.accent {
+  color: #2e6296;
+}
+
+.sub-title {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Nodes Wrapper Alignment */
+.nodes-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 40px;
+}
+
+.service-card {
+  flex: 1;
+  min-width: 380px;
+  max-width: 460px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 35px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  color: #193450;
+}
+
+.header-icon {
+  font-size: 22px;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Internal Field Styling */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+}
+
+.field label {
+  font-size: 12px;
+  text-align: left;
+  width: 100%;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-self: flex-start;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.input-group input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 12px 10px;
+  outline: none;
+  text-align: left;
+  color: #193450;
+  font-size: 14px;
+}
+
+.checkbox-ui {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+  color: #193450;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.checkbox-ui input {
+  display: none;
+}
+
+.custom-box {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #e2e8f0;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  transition: 0.2s;
+}
+
+.checkbox-ui input:checked + .custom-box {
+  background-color: #2e6296;
+  border-color: #2e6296;
+  color: #ffffff;
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 16px;
+  background-color: #2e6296;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.primary-btn:hover {
+  background-color: #193450;
+}
+
+.success-pill {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background-color: #f0fdfa;
+  border: 1px solid #2e6296;
+  border-radius: 8px;
+  margin-top: 5px;
+  color: #193450;
+}
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1.5px solid #e2e8f0;
+  object-fit: cover;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%; /* Allows icon to push to the right */
+}
+
+/* @username styling */
+.username {
+  font-size: 15px;
+  color: #193450;
+  font-weight: 700;
+}
+
+/* Full name styling */
+.display-name {
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Check icon pushed to the far right */
+.verify-icon {
+  margin-left: auto;
+  color: #2e6296;
+  font-size: 16px;
+}
+
+/* Status pill - success and error variants */
+.status-pill {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  animation: fadeSlideIn 0.25s ease;
+}
+
+.status-pill svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-size: 15px;
+}
+
+.status-pill.success {
+  background-color: #f0fdf4;
+  border: 1px solid #86efac;
+  color: #166534;
+}
+
+.status-pill.error {
+  background-color: #fff1f2;
+  border: 1px solid #fca5a5;
+  color: #991b1b;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fix: Sticky/Persistent Footer Alignment */
+.persistent-footer {
+  width: 100%;
+  padding: 20px 0;
+  background-color: #ffffff;
+  border-top: 1px solid #f1f5f9;
+  flex-shrink: 0; /* Prevents footer from disappearing on zoom */
+  text-align: center;
+}
+
+/* .persistent-footer p {
+  color: #94a3b8;
+  font-size: 13px;
+  margin: 0;
+} */
