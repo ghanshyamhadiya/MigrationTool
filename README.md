@@ -10,7 +10,7 @@
 |---|---|
 | **Input** | Oracle SQL Developer session SQL or `.sql` file upload |
 | **Output** | PySpark DataFrame API or SparkSQL |
-| **AI Engine** | Anthropic API / OpenAI API |
+| **AI Engine** | Anthropic API / OpenAI API / Gemini API |
 | **Instruction Source** | GitHub-hosted markdown files (fetched at runtime) |
 
 ---
